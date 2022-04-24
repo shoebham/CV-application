@@ -1,19 +1,20 @@
 
-import React from "react";
+import React, { Component } from "react";
 
-const EducationInput = (props) => {
+class EducationInput extends Component{
 
     // const {firstName,lastName,contact,email,city,state,country} = props;
 
-    return (
-      <div>
-        <input type="text" placeholder='Company Name'/>
-        <input type="text" placeholder='Job Title'/>
-        <input type="text" placeholder='Job Description'/>
-        <input type="text" placeholder='Job Start Date'/>
-        <input type="text" placeholder='Job End Date'/>
-        <input type="text" placeholder='Job Location'/>
-      </div>
-    );
+    render(){
+      return (
+        <div>
+        <input type="text" name="schoolName" placeholder='School Name' onChange={this.props.handleChange("EducationDetails")}/>
+        <input type="text" name="schoolLocation" placeholder='School Location' onChange={this.props.handleChange("EducationDetails")}/>
+        <input type="text" name="degree" placeholder='Degree' onChange={this.props.handleChange("EducationDetails")}/>
+        <input type="text" name="major" placeholder='Major' onChange={this.props.handleChange("EducationDetails")}/> 
+        <input type="text" name="gpa" placeholder='GPA' onChange={this.props.handleChange("EducationDetails")}/>
+        </div>
+      );
+    }
 }
 export default EducationInput;
