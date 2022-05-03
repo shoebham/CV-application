@@ -8,6 +8,7 @@ class WorkInput extends Component{
 
     return (
       <div>
+          <p>Work</p>
           <input type="text" name="companyName" placeholder='Company Name' onChange={this.props.handleChange("WorkDetails")}/>
           <input type="text" name="jobTitle" placeholder='Job Title' onChange={this.props.handleChange("WorkDetails")}/>
           <input type="text" name="jobDescription" placeholder='Job Description' onChange={this.props.handleChange("WorkDetails")}/>

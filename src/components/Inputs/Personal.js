@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 
 class PersonalInput extends Component{
-  constructor(){
-    super();
-  }
+
   render(){
     // const {firstName,lastName,contact,email,city,state,country}=this.props.state;
     return (
       <div>
+          <p>Personal</p>
         <input type="text" name="firstName" placeholder="First Name" onChange={this.props.handleChange("PersonalDetails")}/>
         <input type="text" name="lastName" placeholder="Last Name" onChange={this.props.handleChange("PersonalDetails")}/>
         <input type="number" name="contact" placeholder="Contact number" onChange={this.props.handleChange("PersonalDetails")}/>

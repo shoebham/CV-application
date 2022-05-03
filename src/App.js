@@ -1,7 +1,6 @@
 import { Component } from 'react';
-import EducationInput from './components/Education';
-import PersonalInput from './components/Personal';
-import WorkInput from './components/Work';
+import CVInput from './components/Inputs/CVInput';
+import CVPreview from './components/Preview/CVPreview';
 class App extends Component{
   constructor(){
     super();
@@ -50,9 +49,8 @@ class App extends Component{
   render(){
     return (
       <div>
-        <PersonalInput handleChange = {this.handleChange}/>
-        <EducationInput handleChange = {this.handleChange}/>
-        <WorkInput handleChange = {this.handleChange}/>
+        <CVInput handleChange={this.handleChange}/>
+        <CVPreview state={this.state}/>       
       </div>
     )
   }
