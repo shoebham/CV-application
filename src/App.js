@@ -49,7 +49,6 @@ class App extends Component{
             
             detail= {...detail, [name]:value}
           }
-          console.log(detail);
           return detail
         })
       })
@@ -57,10 +56,44 @@ class App extends Component{
     }
   }
 
+  handleAdd=(e,typeOfDetail)=>{
+      console.log("here");
+      if(typeOfDetail==="EducationDetails"){
+        this.setState({
+          [typeOfDetail]:[
+            ...this.state[typeOfDetail],
+            [{
+            id:uniqid(),
+            schoolName:"",
+            schoolLocation:"",
+            degree:"",
+            major:"",
+            gpa:""
+          }]
+        ]
+        })
+      }
+    else if(typeOfDetail==="WorkDetails"){
+      this.setState({
+        [typeOfDetail]:[
+          ...this.state[typeOfDetail],
+          [{
+          id:uniqid(),
+          companyName:"",
+          jobTitle:"",
+          jobDescription:"",
+          jobStartDate:"",
+          jobEndDate:"",
+          jobLocation:""
+        }]
+      ]
+      })
+    }
+  }
   render(){
     return (
       <div>
-        <CVInput handleChange={this.handleChange} state={this.state}/>
+        <CVInput handleChange={this.handleChange} state={this.state} handleAdd={this.handleAdd}/>
         <CVPreview state={this.state}/>       
       </div>
     )

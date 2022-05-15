@@ -6,21 +6,22 @@ import WorkInput from './Work';
 
 class CVInput extends Component{
     render(){
-        const {handleChange,state} = this.props;
+        const {handleChange,state,handleAdd} = this.props;
         return (
             <div>
             <PersonalInput handleChange = {handleChange}/>
             {
                 state.EducationDetails.map((education,index)=>{
-                    console.log("education",education);
                     return <EducationInput key={index} handleChange = {handleChange} index={index} id={education.id}/>
                 })
             }
+            <button name="EducationDetails" onClick={(e)=>handleAdd(e,"EducationDetails") }>Add Education</button>
             {
                 state.WorkDetails.map((work,index)=>{
                     return <WorkInput key={index} handleChange = {handleChange} index={index} id={work.id}/>
                 })   
             }
+            <button name="WorkDetails" onClick={(e)=>handleAdd(e,"WorkDetails")}>Add work</button>
           </div>
         );
     }

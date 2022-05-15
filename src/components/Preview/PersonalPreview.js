@@ -2,7 +2,7 @@ import { Component } from "react";
 
 class PersonalPreview extends Component{
     render(){
-        const {firstName, lastName, contact, email, city, state, country} = this.props.PersonalDetails;
+        const {firstName, lastName, contact, email, city, state, country} = this.props.PersonalDetails[0];
         return (
             <div>
                 <p><b>Personal</b></p>
