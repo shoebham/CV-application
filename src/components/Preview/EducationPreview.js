@@ -6,7 +6,7 @@ class EducationPreview extends Component{
         const {schoolName, schoolLocation, degree, major, gpa} = this.props.EducationDetails;
         return (
             <div>
-                <p>Education</p>
+                <p><b>Education</b></p>
                 <p>School Name: {schoolName}</p>
                 <p>School Location: {schoolLocation}</p>
                 <p>Degree: {degree}</p>

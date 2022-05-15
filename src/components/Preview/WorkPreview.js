@@ -6,7 +6,7 @@ class WorkPreview extends Component{
         const {companyName, jobTitle, jobDescription, jobStartDate, jobEndDate, jobLocation} = this.props.WorkDetails;
         return(
             <div>
-                <p>Work</p>
+                <p><b>Work</b></p>
                 <p>Company Name: {companyName}</p>
                 <p>Job Title: {jobTitle}</p>
                 <p>Job Description: {jobDescription}</p>
