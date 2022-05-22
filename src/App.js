@@ -90,10 +90,20 @@ class App extends Component{
       })
     }
   }
+
+  handleDelete=(typeOfDetail,id)=>{
+    return (e)=>{
+      this.setState({
+        [typeOfDetail]:this.state[typeOfDetail].filter(detail=>{
+          return detail.id!==id
+        })
+      })
+    }
+  }
   render(){
     return (
       <div className="main">
-        <CVInput handleChange={this.handleChange} state={this.state} handleAdd={this.handleAdd}/>
+        <CVInput handleChange={this.handleChange} state={this.state} handleAdd={this.handleAdd} handleDelete={this.handleDelete}/>
         <CVPreview  state={this.state} />       
       </div>
     )
