@@ -2,3 +2,17 @@ input{
     display: block;
     margin:10px;
 }
+
+.main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: baseline;
+    align-content: center;
+    justify-content: center;
+}
+
+.item{
+    flex-basis: 100%;
+
+}

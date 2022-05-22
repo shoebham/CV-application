@@ -8,8 +8,9 @@ class CVInput extends Component{
     render(){
         const {handleChange,state,handleAdd} = this.props;
         return (
-            <div>
-            <PersonalInput handleChange = {handleChange}/>
+            <div className="CVInput item">
+            <PersonalInput id={state.PersonalDetails[0].id} handleChange={handleChange} state={state}/>
+            
             {
                 state.EducationDetails.map((education,index)=>{
                     return <EducationInput key={index} handleChange = {handleChange} index={index} id={education.id}/>

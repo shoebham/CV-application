@@ -8,7 +8,7 @@ class CVPreview extends Component{
     render(){
         const {state}= this.props
         return (
-            <div>
+            <div className="CVPreview item">
             <PersonalPreview PersonalDetails = {state.PersonalDetails}/>
             <EducationPreview EducationDetails = {state.EducationDetails}/>
             <WorkPreview WorkDetails = {state.WorkDetails}/>

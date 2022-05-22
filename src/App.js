@@ -43,10 +43,10 @@ class App extends Component{
   handleChange=(typeOfDetail,id)=>{
     return (e)=>{
       const {name,value}=e.target;
+      console.log("name",id)
       this.setState({
         [typeOfDetail]:this.state[typeOfDetail].map(detail=>{
           if(detail.id===id){
-            
             detail= {...detail, [name]:value}
           }
           return detail
@@ -92,9 +92,9 @@ class App extends Component{
   }
   render(){
     return (
-      <div>
+      <div className="main">
         <CVInput handleChange={this.handleChange} state={this.state} handleAdd={this.handleAdd}/>
-        <CVPreview state={this.state}/>       
+        <CVPreview  state={this.state} />       
       </div>
     )
   }
