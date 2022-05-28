@@ -7,7 +7,8 @@ class PersonalInput extends Component{
     const {id} = this.props;
     return (
       <div>
-          <p>Personal</p>
+        <div  className="input-div"> 
+        <p className="heading-input">Personal</p>
         <input type="text" name="firstName" placeholder="First Name" onChange={this.props.handleChange("PersonalDetails",id)}/>
         <input type="text" name="lastName" placeholder="Last Name" onChange={this.props.handleChange("PersonalDetails",id)}/>
         <input type="number" name="contact" placeholder="Contact number" onChange={this.props.handleChange("PersonalDetails",id)}/>
@@ -15,6 +16,7 @@ class PersonalInput extends Component{
         <input type="text" name="city" placeholder="City" onChange={this.props.handleChange("PersonalDetails",id)}/>
         <input type="text" name="state" placeholder="State" onChange={this.props.handleChange("PersonalDetails",id)}/>
         <input type="text" name="country" placeholder="Country" onChange={this.props.handleChange("PersonalDetails",id)}/>
+        </div>
       </div>
     );
   }

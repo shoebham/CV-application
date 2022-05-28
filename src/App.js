@@ -43,7 +43,6 @@ class App extends Component{
   handleChange=(typeOfDetail,id)=>{
     return (e)=>{
       const {name,value}=e.target;
-      console.log("name",id)
       this.setState({
         [typeOfDetail]:this.state[typeOfDetail].map(detail=>{
           if(detail.id===id){
@@ -52,24 +51,23 @@ class App extends Component{
           return detail
         })
       })
-      console.log(this.state[typeOfDetail]);
     }
   }
 
   handleAdd=(e,typeOfDetail)=>{
-      console.log("here");
+    e.preventDefault();
       if(typeOfDetail==="EducationDetails"){
         this.setState({
           [typeOfDetail]:[
             ...this.state[typeOfDetail],
-            [{
+            {
             id:uniqid(),
             schoolName:"",
             schoolLocation:"",
             degree:"",
             major:"",
             gpa:""
-          }]
+          }
         ]
         })
       }
@@ -77,7 +75,7 @@ class App extends Component{
       this.setState({
         [typeOfDetail]:[
           ...this.state[typeOfDetail],
-          [{
+          {
           id:uniqid(),
           companyName:"",
           jobTitle:"",
@@ -85,10 +83,11 @@ class App extends Component{
           jobStartDate:"",
           jobEndDate:"",
           jobLocation:""
-        }]
+        }
       ]
       })
     }
+    console.log(this.state)
   }
 
   handleDelete=(typeOfDetail,id)=>{

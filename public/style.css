@@ -14,5 +14,57 @@ input{
 
 .item{
     flex-basis: 100%;
-
 }
+
+html{
+    background-color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+button{
+    padding:6px;
+    border-radius:5px;
+    background-color: black;
+    color:white;
+    margin:10px;
+    margin-left:15px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: black;
+    box-shadow: -6px 2px 5px rgba(0,0,0,0.5);
+    color:white;
+    cursor: pointer;
+}
+
+.heading-input{
+    font-size:24px;
+    border:1px solid white;
+    padding: 5px;
+    margin:2px;
+    color:white;
+    background: black;
+    
+}
+.input-div{
+    border:1px solid black;
+    font-size:24px;
+}
+input{
+    border: none;
+}
+
+input:focus{
+    outline: none;
+    border-bottom: 1px solid black;
+}
+/* 
+.heading{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: baseline;
+    align-content: center;
+    justify-content: space-between;
+} */

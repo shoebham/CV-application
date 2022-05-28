@@ -11,13 +11,10 @@ class CVInput extends Component{
         return (
             <div className="CVInput item">
             <PersonalInput id={state.PersonalDetails[0].id} handleChange={handleChange} state={state}/>
-            
             {
                 state.EducationDetails.map((education,index)=>{
                     return <div key={index} index={index}>
-                        <EducationInput key={index} handleChange = {handleChange} index={index} id={education.id}/>
-                        
-                        {index > 0&&<button name="EducationDetails" onClick={handleDelete("EducationDetails",education.id) }>Delete Education</button>}
+                        <EducationInput key={index} handleChange = {handleChange} index={index} id={education.id} handleDelete={handleDelete}/>
                     </div>
                 })
             }
@@ -25,13 +22,12 @@ class CVInput extends Component{
             {
                 state.WorkDetails.map((work,index)=>{
                     return <div key={index} index={index}>
-                        <WorkInput  handleChange = {handleChange}  id={work.id}/>
-                        {index>0&&<button name="WorkDetails" onClick={handleDelete("WorkDetails",work.id) }>Delete Work</button>}
+                        <WorkInput key={index} index={index} handleChange = {handleChange}  id={work.id} handleDelete={handleDelete}/>
                         </div>
                 })   
             }
             <button name="WorkDetails" onClick={(e)=>handleAdd(e,"WorkDetails")}>Add work</button>
-            
+            <button name="submit">Submit</button>
           </div>
         );
     }
