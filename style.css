@@ -1,0 +1,122 @@
+input{
+    display: block;
+    margin:10px;
+}
+
+.main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: baseline;
+    align-content: center;
+    justify-content: center;
+}
+
+.item{
+    flex-basis: 100%;
+    padding-right: 10px;
+    
+    border-radius: 10px;
+}
+.CVInput{
+    border-radius: 10px;
+}
+html{
+    background-color: rgba(253, 253, 253, 0.993);
+    
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.title{
+    border-bottom: 1px solid black;
+    font-size: 24px;
+    
+}
+.CVPreview{
+    background-color: white;
+    font-family: 'Times New Roman', Times, serif;
+    padding-left:24px;
+}
+.live-preview{
+    display: inline-block;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    font-size: 24px;
+    margin: 0px;
+    padding: 5px;
+    background-color: black;
+    color: white;
+}
+.input-heading{
+    display: inline-block;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    font-size: 24px;
+    margin:0;
+    margin-bottom: 15px;
+    padding: 5px;
+    background-color: black;
+    color: white;
+
+}
+button{
+    padding:6px;
+    border-radius:5px;
+    background-color: black;
+    color:white;
+    margin:10px;
+    margin-left:15px;
+    cursor: pointer;
+    
+}
+
+button:hover{
+    background-color: black;
+    box-shadow: -6px 2px 5px rgba(0,0,0,0.5);
+    color:white;
+    cursor: pointer;
+    
+}
+
+.heading-input{
+    display: inline-block;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    font-size: 24px;
+    margin: 0px;
+    
+    padding: 5px;
+    background-color: black;
+    color: white;    
+    
+}
+.input-div{
+    border:1px solid black;
+    font-size:24px;
+    border-radius: 10px;
+}
+input{
+    border: none;
+    background: transparent;
+    color:black;
+    font: 18px sans-serif;
+}
+input::placeholder {
+    font: 20px/3 sans-serif;
+    color:black;
+}
+input:focus{
+    outline: none;
+    border-bottom: 1px solid black;
+    color:black;
+}
+/* font color white when not selected */
+input::before{
+    color:white
+}
+/* 
+.heading{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: baseline;
+    align-content: center;
+    justify-content: space-between;
+} */
