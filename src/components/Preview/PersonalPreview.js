@@ -5,7 +5,7 @@ class PersonalPreview extends Component{
         const {firstName, lastName, contact, email, city, state, country} = this.props.PersonalDetails[0];
         return (
             <div>
-                <p><b>Personal</b></p>
+                <p class="title"><b>Personal</b></p>
                 <p>First Name: {firstName}</p>
                 <p>Last Name: {lastName}</p>
                 <p>Contact: {contact}</p>

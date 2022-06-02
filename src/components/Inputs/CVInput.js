@@ -7,9 +7,9 @@ import WorkInput from './Work';
 class CVInput extends Component{
     render(){
         const {handleChange,state,handleAdd,handleDelete} = this.props;
-
         return (
             <div className="CVInput item">
+            <center><p className="input-heading">Input</p></center>
             <PersonalInput id={state.PersonalDetails[0].id} handleChange={handleChange} state={state}/>
             {
                 state.EducationDetails.map((education,index)=>{
@@ -18,7 +18,7 @@ class CVInput extends Component{
                     </div>
                 })
             }
-            <button name="EducationDetails" onClick={(e)=>handleAdd(e,"EducationDetails") }>Add Education</button>
+            <center><button name="EducationDetails" onClick={(e)=>handleAdd(e,"EducationDetails") }>Add Education</button></center>
             {
                 state.WorkDetails.map((work,index)=>{
                     return <div key={index} index={index}>
@@ -26,8 +26,8 @@ class CVInput extends Component{
                         </div>
                 })   
             }
-            <button name="WorkDetails" onClick={(e)=>handleAdd(e,"WorkDetails")}>Add work</button>
-            <button name="submit">Submit</button>
+           <center> <button name="WorkDetails" onClick={(e)=>handleAdd(e,"WorkDetails")}>Add work</button>
+           <button className="submit" name="submit">Submit</button></center>
           </div>
         );
     }

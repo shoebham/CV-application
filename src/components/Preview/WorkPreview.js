@@ -11,7 +11,7 @@ class WorkPreview extends Component{
                     workDetails.map((work,index)=>{
                         return (
                             <div key={index}>
-                                <p><b>Work</b></p>
+                                <p className="title"><b>Work</b></p>
                                 <p>Company Name: {work.companyName}</p>
                                 <p>Job Title: {work.jobTitle}</p>
                                 <p>Job Description: {work.jobDescription}</p>

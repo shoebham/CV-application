@@ -11,7 +11,7 @@ class EducationPreview extends Component{
                 educationDetails.map((education,index)=>{
                     return (
                         <div key={index}>  
-                            <p><b>Education</b></p>
+                            <p className="title"><b>Education</b></p>
                             <p>School Name: {education.schoolName}</p>
                             <p>School Location: {education.schoolLocation}</p>
                             <p>Degree: {education.degree}</p>

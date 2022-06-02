@@ -8,7 +8,7 @@ class PersonalInput extends Component{
     return (
       <div>
         <div  className="input-div"> 
-        <p className="heading-input">Personal</p>
+        <center><p className="heading-input">Personal</p></center>
         <input type="text" name="firstName" placeholder="First Name" onChange={this.props.handleChange("PersonalDetails",id)}/>
         <input type="text" name="lastName" placeholder="Last Name" onChange={this.props.handleChange("PersonalDetails",id)}/>
         <input type="number" name="contact" placeholder="Contact number" onChange={this.props.handleChange("PersonalDetails",id)}/>

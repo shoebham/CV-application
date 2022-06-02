@@ -9,7 +9,7 @@ class WorkInput extends Component{
     return (
       <div>
           <div className="input-div">
-          <p className="heading-input">Work</p>
+          <center><p className="heading-input">Work</p></center>
           <input type="text" name="companyName" placeholder='Company Name' onChange={this.props.handleChange("WorkDetails",id)}/>
           <input type="text" name="jobTitle" placeholder='Job Title' onChange={this.props.handleChange("WorkDetails",id)}/>
           <input type="text" name="jobDescription" placeholder='Job Description' onChange={this.props.handleChange("WorkDetails",id)}/>

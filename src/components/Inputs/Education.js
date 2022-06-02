@@ -10,7 +10,7 @@ class EducationInput extends Component{
       return (
         <div>
           <div  className="input-div"> 
-            <p className="heading-input">Education</p>
+            <center><p className="heading-input title">Education</p></center> 
             <input type="text" name="schoolName" placeholder='School Name' onChange={this.props.handleChange("EducationDetails",id)}/> 
             <input type="text" name="schoolLocation" placeholder='School Location' onChange={this.props.handleChange("EducationDetails",id)}/>
             <input type="text" name="degree" placeholder='Degree' onChange={this.props.handleChange("EducationDetails",id)}/>
